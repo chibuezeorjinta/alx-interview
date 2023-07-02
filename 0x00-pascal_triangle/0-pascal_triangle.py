@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-# for the pascals triangle.
-# my attempt will use recursion
+"""for the pascals triangle. My attempt will use recursion"""
 
 def pascal_triangle(n) -> list:
     """
