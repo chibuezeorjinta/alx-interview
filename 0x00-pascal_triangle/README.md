@@ -1,0 +1,1 @@
+## Develop the pascals triangle using permitaion and combination function
