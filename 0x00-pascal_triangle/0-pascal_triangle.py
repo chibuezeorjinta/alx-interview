@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """for the pascals triangle. My attempt will use recursion"""
 
+
 def pascal_triangle(n) -> list:
     """
     wrapper function to analyse the recussive main function
@@ -17,6 +18,7 @@ def pascal_triangle(n) -> list:
     ]
     count = 1
     return createnewlist(pascalsList, count, n)
+
 
 def createnewlist(mainList: list, count, n) -> list:
     """
