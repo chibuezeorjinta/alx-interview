@@ -11,23 +11,17 @@ def canUnlockAll(boxes):
             Return: boolean = true if all the boxes can be opened, else false
     """
 
-    Box = {}
-    indexlist = []
-    openboxes = []
-    openboxes.append(0)
-    for i, j in enumerate(boxes):
-        Box[i] = j
-        indexlist.append(i)
-    indexlist.remove(0)
-    for i in openboxes:
-        if Box.get(i) is not []:
-            for value in Box.get(i):
-                if value not in openboxes:
-                    openboxes.append(value)
-                    indexlist.remove(value)
-        else:
-            continue
-    if len(indexlist) == 0:
+    allKeys = {0}
+    allKeys.update(boxes[0])
+    openboxes = [] + boxes[0]
+
+    for key in openboxes:
+        if key < len(boxes) and key >= 0:
+            allKeys.update(boxes[key])
+        new_keys = allKeys - set(openboxes)
+        openboxes += new_keys
+
+    useful_keys = [k for k in allKeys if k < len(boxes)]
+    if len(useful_keys) == len(boxes):
         return True
-    else:
-        return False
+    return False
