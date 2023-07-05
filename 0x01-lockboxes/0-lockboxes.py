@@ -3,6 +3,14 @@
 
 
 def canUnlockAll(boxes):
+    """
+        with a list, we dynamically append our available keys while
+        removing the opened boxes
+            Args:
+                boxes: list = a list of lists representing the boxes
+            Return: boolean = true if all the boxes can be opened, else false
+    """
+
     Box = {}
     indexlist = []
     openboxes = []
