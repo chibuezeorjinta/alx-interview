@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Get minimum operations with copy all and paste only"""
 
 
