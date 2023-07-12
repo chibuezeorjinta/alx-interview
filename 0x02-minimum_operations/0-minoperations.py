@@ -17,24 +17,16 @@ def minOperations(n: int = None) -> int:
     string_val: str = 'H'
     count: int = 0
     paste_len: int = 0
-    if n <= 1:
+
+    if n is None or n <= 1:
         return 0
-    if n is None:
-        return 0
-    for _ in range(n):
-        if (n % len(string_val)) == 0:
+
+    while len(string_val) < n:
+        if n % len(string_val) == 0:
             paste_len = len(string_val)
-            string_val += ('H' * paste_len)
             count += 2
-            if len(string_val) == n:
-                return count
         else:
-            string_val += ('H' * paste_len)
             count += 1
-            if len(string_val) == n:
-                return count
-    return n
+        string_val += ('H' * paste_len)
 
-
-if __name__ == "__main__":
-    minOperations()
+    return count if len(string_val) == n else n
