@@ -17,7 +17,7 @@ def minOperations(n: int) -> int:
     string_val: str = 'H'
     count: int = 0
     paste_len: int = 1
-    if n <= 0:
+    if n <= 1:
         return 0
     for _ in range(n):
         if (n % len(string_val)) == 0:
