@@ -1,0 +1,5 @@
+### Minimum Operations
+
+ | Function                                 | Description                                                                                                                                                                                                                                     |
+ |------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [minimum_operations](0-minoperations.py) | Takes in an int, to return the minimum operations of copy all and paste to get to the target int when target is a prime, it returns n. if the current length of the string is a multiple of the target, do copy all and paste. else only paste. |
