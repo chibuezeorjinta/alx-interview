@@ -2,10 +2,10 @@
 """Get minimum operations with copy all and paste only"""
 
 
-def minOperations(n: int) -> int:
+def minOperations(n: int = None) -> int:
     """
     Takes in an int, to return the minimum operations
-    of copy all and paste to get to the target int'
+    of copy all and paste to get to the target int
     when target is a prime, it returns n.
     if the current length of the string is a multiple
     of the target, do copy all and paste.
@@ -16,8 +16,10 @@ def minOperations(n: int) -> int:
     """
     string_val: str = 'H'
     count: int = 0
-    paste_len: int = 1
+    paste_len: int = 0
     if n <= 1:
+        return 0
+    if n is None:
         return 0
     for _ in range(n):
         if (n % len(string_val)) == 0:
@@ -32,3 +34,7 @@ def minOperations(n: int) -> int:
             if len(string_val) == n:
                 return count
     return n
+
+
+if __name__ == "__main__":
+    minOperations()
