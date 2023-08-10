@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """check for utf-8"""
 
 def validUTF8(data):
