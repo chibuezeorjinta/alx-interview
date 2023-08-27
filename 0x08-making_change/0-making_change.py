@@ -8,11 +8,11 @@ def makeChange(coins, total):
     to meet a given amount total
 
     Args:
-    	coins: list = Values of your the coins
-    	total:int = target amount
+        coins: list = Values of your the coins
+        total:int = target amount
 
     Returns:
-    	changeNum: fewest number of coins needed to meet total
+        changeNum: fewest number of coins needed to meet total
     """
     if total < 1:
         return 0
