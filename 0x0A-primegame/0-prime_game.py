@@ -17,6 +17,8 @@ def isWinner(x, nums):
     """
     ben = 0
     maria = 0
+    nums = set(nums)
+    nums = list(nums)
     for y in range(x):
         try:
             n = nums[y]
